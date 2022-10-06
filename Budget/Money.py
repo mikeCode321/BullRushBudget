@@ -18,3 +18,4 @@ class Money:
 
 
 print ("hello")
+print ("dog")
