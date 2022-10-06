@@ -50,6 +50,9 @@ class BudgetGUI:
         self.tree = ttk.Treeview(self.frame, height=20)
         self.tree.pack()
 
+        self.compute = Button(master, text="Compute")
+        self.compute.place(x=140, y=500)
+
         # scrollbar = ttk.Scrollbar(master, orient=VERTICAL, command=tree.yview)
         # tree.configure(yscrollcommand=scrollbar.set)
         # scrollbar.grid(row=0, column=1, sticky='ns')
