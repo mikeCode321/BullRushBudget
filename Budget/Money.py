@@ -17,3 +17,4 @@ class Money:
         self.isOverBudget = cond
 
 
+print ("hello")
