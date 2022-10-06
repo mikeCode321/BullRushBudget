@@ -49,6 +49,13 @@ class BudgetGUI:
 
         self.tree = ttk.Treeview(self.frame, height=20)
         self.tree.pack()
+        
+        #check button
+        self.chk = BooleanVar()
+        self.chk.set(True)
+        self.chk = Checkbutton(master,text='Select', var=self.chk.set)
+        self.chk.place(x=500,y=500)
+        self.chk.pack()
 
         # scrollbar = ttk.Scrollbar(master, orient=VERTICAL, command=tree.yview)
         # tree.configure(yscrollcommand=scrollbar.set)
