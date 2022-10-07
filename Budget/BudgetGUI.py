@@ -53,6 +53,10 @@ class BudgetGUI:
         self.compute = Button(master, text="Compute")
         self.compute.place(x=140, y=500)
 
+        self.options = ["h", "i", "j"]
+        self.drop = OptionMenu(master, *self.options)
+        self.drop.place(x=2, y=500)
+
         # scrollbar = ttk.Scrollbar(master, orient=VERTICAL, command=tree.yview)
         # tree.configure(yscrollcommand=scrollbar.set)
         # scrollbar.grid(row=0, column=1, sticky='ns')
