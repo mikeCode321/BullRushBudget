@@ -50,6 +50,11 @@ class BudgetGUI:
         self.tree = ttk.Treeview(self.frame, height=20)
         self.tree.pack()
 
+        self.options = ["h", "i", "j"]
+
+        self.drop = OptionMenu(master,*self.options )
+        self.drop.place(x=2, y=500)
+
         # scrollbar = ttk.Scrollbar(master, orient=VERTICAL, command=tree.yview)
         # tree.configure(yscrollcommand=scrollbar.set)
         # scrollbar.grid(row=0, column=1, sticky='ns')
@@ -64,7 +69,7 @@ class BudgetGUI:
         csvFileParsed = ParseReport(self.callReportToGenerate())
         column = tuple(csvFileParsed.getHeadings())
         self.tree.destroy()
-        self.tree = ttk.Treeview(self.frame, columns=column,show='headings', height=20)
+        self.tree = ttk.Treeview(self.frame, columns=column, show='headings', height=20)
         self.tree.heading(column[0], text='Description')
         self.tree.column(column[0], minwidth=70, width=125, stretch=NO)
         self.tree.heading(column[1], text='Earnings/Expenses')
